@@ -6,11 +6,7 @@ class B(A):
     def ShowData(self):
         obj = A()
         obj.ShowData()
-        super.ShowData()
         print("I m in class B")
 
 obj = B()
 obj.ShowData()
-
-
-
