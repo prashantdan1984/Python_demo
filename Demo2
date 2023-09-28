@@ -1,4 +1,4 @@
-import sqllite
+import sqlite3
 
 class A:
     def ShowData(self):
