@@ -27,6 +27,7 @@ dict1 = [{'id': 1, 'name':'prashant', 'age' : 38, 'work_type' : 'Job'},
 # Create and write file
 file=open("json_file.txt", 'w')
 file.write(json.dumps(dict1))
+
 file.close()
 
 # Read file.
@@ -34,14 +35,34 @@ file=open("json_file.txt", 'r')
 y=file.read()
 finaldata= json.loads(y)
 print(y)
+print(type(y))
 for a in finaldata:
     print(a['id'], a['name'])
 
+# Append File.
+file=open("json_file.txt", 'w')
+print(type(finaldata))
+finaldata.append({'id': 7, 'name':'shakti', 'age' : 33, 'work_type' : 'job'})
+file.write(json.dumps(finaldata))
 file.close()
 
+'''
 # Append File.
+with open("json_file.txt", 'w') as ft:
+    listObj=json.loads(ft)
+    
+#verify existing list
+print(listObj)
+print(type(listObj))
+
+listObj.append({'id': 7, 'name':'shakti', 'age' : 33, 'work_type' : 'job'})
+
+    #verify updated list
+print(listObj)
+
+
 file =open("json_file.txt", 'w')
 xx= {'id': 7, 'name':'shakti', 'age' : 33, 'work_type' : 'job'}
 file.write(json.dumps(xx))
-file.close()
+file.close()'''
 
